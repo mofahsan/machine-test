@@ -4,7 +4,6 @@ const USERLOOKUPMODEL = require("../models/users_lookup")
 const addUser = async (req,res,next)=>{
     try{
         let {email,EID} = req.body
-        console.log(EID)
             const ifexist = await USERMODEL.findOne({email:email})
 
             if(ifexist==null){
